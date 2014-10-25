@@ -1,0 +1,17 @@
+<head>
+  <title>betabeers</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+	{{#each tweets}}
+		{{#AnimateWithVelocity}}
+			<div class="tweet" data-animate data-property="opacity" data-duration="500" data-from-value="0" data-to-value="1">Tweet:{{text}}</div>
+		{{/AnimateWithVelocity}}
+	{{/each}}
+</template>
